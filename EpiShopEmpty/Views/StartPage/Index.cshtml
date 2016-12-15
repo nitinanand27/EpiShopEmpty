@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model EpiShopEmpty.Models.Pages.StartPage
+
+<div>
+    <h4>@Model.Introduction</h4>
+    <img src="@Url.ContentUrl(Model.PageImage)" alt="Image" />
+  @Html.PropertyFor(m => m.MainBody)
+</div>
