@@ -4,13 +4,15 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Commerce.Catalog.DataAnnotations;
+using EPiServer.Commerce.Catalog.ContentTypes;
 
-namespace EpiShopEmpty.Models.Pages
+namespace EpiShopEmpty.Models.Catalog
 {
-    [ContentType(DisplayName = "StartPage", GUID = "a281f1b0-668c-469f-991c-3ceb1697636e", Description = "")]
-    public class StartPage : SitePageData
+    [CatalogContentType(MetaClassName  = "NewCatalog", GUID = "6baa3f9c-dd76-474c-8f7c-d09aa85b3d46")]
+    public class NewCatalog : CatalogContent
     {
-       
+        
                 [CultureSpecific]
                 [Display(
                     Name = "Main body",
@@ -18,8 +20,6 @@ namespace EpiShopEmpty.Models.Pages
                     GroupName = SystemTabNames.Content,
                     Order = 1)]
                 public virtual XhtmlString MainBody { get; set; }
-
-        public virtual ContentArea ContentArea { get; set; }
-
+         
     }
 }

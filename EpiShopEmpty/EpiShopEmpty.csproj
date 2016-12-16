@@ -352,6 +352,7 @@
     </Compile>
     <Compile Include="Infrastructure\InitializationModule.cs" />
     <Compile Include="Models\Catalog\Car.cs" />
+    <Compile Include="Models\Catalog\NewCatalog.cs" />
     <Compile Include="Models\Media\DefaultMedia.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
@@ -372,7 +373,9 @@
   <ItemGroup>
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\GeoLiteCity.dat" />
     <Content Include="Configs\baf.config" />
     <Content Include="Configs\baf.data.manager.config" />
